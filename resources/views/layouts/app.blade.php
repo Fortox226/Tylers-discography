@@ -16,8 +16,8 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
-    <div id="app" class="h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('background.png') }}');">
+<body style="background-image: url('{{ asset('background.png') }}'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-opacity-75 shadow ">
             <div class="container">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
@@ -60,6 +60,10 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('adminpanel') }}">
+                                        {{ __('AdminPanel') }}
+                                    </a>
+                                   
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
