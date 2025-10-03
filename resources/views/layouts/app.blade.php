@@ -17,8 +17,8 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app" class="h-screen bg-cover bg-center" style="background-image: url('{{ asset('background.png') }}');">
-        <nav class="navbar navbar-expand-md navbar-light bg-opacity-75 shadow">
+    <div id="app" class="h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('background.png') }}');">
+        <nav class="navbar navbar-expand-md navbar-light bg-opacity-75 shadow ">
             <div class="container">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
                     Tylers's Discography
