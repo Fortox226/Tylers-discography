@@ -12,16 +12,22 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body style="background-image: url('{{ asset('background.png') }}'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-opacity-75 shadow ">
+        <nav class="navbar navbar-expand-md navbar-light bg-opacity-75">
             <div class="container">
-                <a class="navbar-brand text-white" href="{{ url('/') }}">
-                    Tylers's Discography
+                <a class="navbar-brand text-white flex-wrap" href="{{ url('/') }}">
+                    <h1 style=" font-family: 'Poppins', sans-serif; font-size: 60px; font-weight: 700;">
+                        Tyler The Creator
+                    </h1>
+                    <h2>Rapper and producer</h2>
+                    
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
