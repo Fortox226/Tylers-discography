@@ -6,15 +6,18 @@ use Illuminate\Http\Request;
 
 class AdminPanelController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
-        
-        return view('admin');
+        // Sprawdź czy użytkownik jest zalogowany
+        if (!auth()->check()) {
+            return redirect()->route('login');
+        }
 
+        // Użyj prostej metody hasRole
+        if (!auth()->user()->hasRole('admin')) {
+            abort(403, 'Brak uprawnień administratora');
+        }
+
+        return view('admin'); // Twój widok panelu admina
     }
 }
