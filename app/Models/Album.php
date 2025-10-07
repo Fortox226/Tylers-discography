@@ -11,7 +11,7 @@ class Album extends Model
 
     protected $fillable = ['title', 'year', 'cover', 'description'];
 
-    public function song()
+    public function songs()
     {
         return $this->hasMany(Song::class);
     }
