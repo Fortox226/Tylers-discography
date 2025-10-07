@@ -66,7 +66,7 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('adminpanel') }}">
+                                    <a class="dropdown-item" href="/adminpanel">
                                         {{ __('AdminPanel') }}
                                     </a>
                                    
