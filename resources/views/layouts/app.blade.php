@@ -21,10 +21,10 @@
 <body style="background-image: url('{{ asset('background.png') }}'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-opacity-75">
-            <div class="container">
+            <div class="container container-header">
                 <a class="navbar-brand text-white flex-wrap" href="{{ url('/') }}">
-                    <h1 style=" font-family: 'Poppins', sans-serif; font-size: 60px; font-weight: 700;">
-                        Tyler The Creator
+                    <h1 style="font-size: 60px; font-weight: 800;">
+                        TYLER THE <br> CREATOR
                     </h1>
                     <h2>Rapper and producer</h2>
                     

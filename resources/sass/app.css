@@ -1,0 +1,30 @@
+@import url("https://fonts.bunny.net/css?family=Nunito");
+.main-img {
+  background: url("https://ak2.picdn.net/shutterstock/videos/9057502/thumb/12.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+nav .container-header {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  margin: 0;
+}
+nav .container-header .navbar-brand {
+  width: 50%;
+  float: left;
+}
+nav .container-header .navbar-collapse {
+  width: 50%;
+  float: right;
+}/*# sourceMappingURL=app.css.map */
