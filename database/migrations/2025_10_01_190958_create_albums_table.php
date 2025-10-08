@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->smallInteger('year')->nullable();
-            $table->string('cover')->nullable(); // ścieżka do okładki
+            $table->string('cover')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
         });
