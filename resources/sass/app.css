@@ -8,6 +8,17 @@
   width: 100%;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "alfa slab", sans-serif;
+  color: white;
+  font-weight: 800;
+}
+
 nav {
   display: flex;
   width: 100%;
@@ -18,7 +29,6 @@ nav .container-header {
   display: flex;
   justify-content: space-between;
   min-width: 100%;
-  margin: 0;
 }
 nav .container-header .navbar-brand {
   width: 50%;
@@ -27,4 +37,54 @@ nav .container-header .navbar-brand {
 nav .container-header .navbar-collapse {
   width: 50%;
   float: right;
+}
+
+.subtitle {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.subtitle .orange-block {
+  width: 350px;
+  height: 20px;
+  background-color: orangered;
+  border-top: 10px;
+}
+.subtitle hr {
+  width: 100%;
+  height: 2px;
+  border: 1px solid orangered;
+  opacity: 100;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  margin: 0;
+  min-width: 100%;
+}
+.container .row {
+  width: 100%;
+  margin: 0;
+}
+.container .row .albumshold {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 400px;
+}
+.container .row .albumshold .album {
+  width: 400px;
+  height: 400px;
+}
+.container .row .albumshold .album img {
+  width: 100%;
+  height: 100%;
+}
+.container .row .albumshold:hover {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }/*# sourceMappingURL=app.css.map */

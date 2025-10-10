@@ -12,9 +12,15 @@
     <div class="row">
         <div class="albumshold ">
             @foreach ($albums->take(3) as $album)
-                <div class="album bg-white ">
+                <div class="album bg-white">
+                    <div class="album-info">
+                        <h2>{{ $album->title}}
+                            <br>
+                            <h3>{{ $album->year}}</h3>
+                        </h2>
+
+                    </div>
                     <img src="{{ $album->cover }}" alt="">
-                    <h2>{{ $album->title }}</h2>
                 </div>
                         
             @endforeach

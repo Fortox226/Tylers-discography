@@ -6,53 +6,72 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
-body{
+
+body {
     width: 100%;
     height: 100%;
 }
 
-h1{
+h1 {
     font-family: 'alfa slab', sans-serif;
     color: white;
     font-weight: 800;
 }
 
-nav{
+h2 {
+    font-family: 'alfa slab', sans-serif;
+    color: white;
+    font-weight: 800;
+}
+
+h3 {
+    font-family: 'alfa slab', sans-serif;
+    color: white;
+    font-weight: 800;
+}
+
+nav {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
+
     // margin: 20px 20px 0px 20px;
-    .container-header{
+    .container-header {
         display: flex;
         justify-content: space-between;
         min-width: 100%;
+        align-items: normal;
+
         // margin: 0;
-        .navbar-brand{
+        .navbar-brand {
             width: 50%;
             float: left;
         }
-        .navbar-collapse{
+
+        .navbar-collapse {
             width: 50%;
             float: right;
         }
     }
 }
 
-.subtitle{
+.subtitle {
     display: flex;
     width: 100%;
     height: 200px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    .orange-block{
+
+    .orange-block {
         width: 350px;
         height: 20px;
         background-color: orangered;
         border-top: 10px;
     }
-    hr{
+
+    hr {
         width: 100%;
         height: 2px;
         border: 1px solid orangered;
@@ -60,27 +79,78 @@ nav{
         margin: 0;
     }
 }
-.container{
+
+.container {
     display: flex;
     margin: 0;
     min-width: 100%;
-    .row{
+
+    .row {
         width: 100%;
         margin: 0;
-        .albumshold{
+
+        .albumshold {
             display: flex;
             justify-content: space-between;
-           width: 100%;
-           height: 400px;
-            .album{
+            width: 100%;
+            height: 400px;
+
+            .album {
+                transition: 1s;
                 width: 400px;
                 height: 400px;
-                img{
-                width: 100%;
-                }  
+                // display: flex;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:hover {
+                    .album-info {
+                        transition: 1s;
+                        display: flex;
+                    }
+
+                    img {
+                        transition: 0.5s;
+                        filter: blur(5px);
+                    }
+                }
+
+                .album-info {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 50%;
+                    position: absolute;
+                    display: none;
+                    z-index: 1;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+
+                    h2 {
+                        color: orangered;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: gray;
+                        width: 100%;
+                        height: 10px;
+                        text-align: center;
+                        padding: 0;
+                    }
+
+                    h3 {
+                        // width: 100%;
+                        // height: 10px;
+                        text-align: center;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
             }
-            
         }
     }
 }
-
