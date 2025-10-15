@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanelController;
+use App\Http\Controllers\DiscographyController;
 
 Route::get('/', function () {
     return view('home');
@@ -18,4 +19,5 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 });
 
 Route::get('adminpanel', [AdminPanelController::class, 'index'])->middleware('auth');
+Route::get('discography', [DiscographyController::class, 'index'])->middleware('auth');
 

@@ -14,10 +14,8 @@
             @foreach ($albums->take(3) as $album)
                 <div class="album bg-white">
                     <div class="album-info">
-                        <h2>{{ $album->title}}
-                            <br>
-                            <h3>{{ $album->year}}</h3>
-                        </h2>
+                        <h2>{{ $album->title}}</h2>
+                        <h3>{{ $album->year}}</h3>
 
                     </div>
                     <img src="{{ $album->cover }}" alt="">
