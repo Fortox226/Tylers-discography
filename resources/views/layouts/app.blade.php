@@ -55,6 +55,19 @@
                                 </li>
                             @endif
                         @else
+                            @if (Request::is('home') || Request::is('/'))
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/discography">
+                                        {{ __('Discography') }}
+                                    </a>
+                                </li>
+                            @elseif (Request::is('discography'))
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/home">
+                                        {{ __('Home') }}
+                                    </a>
+                                </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
