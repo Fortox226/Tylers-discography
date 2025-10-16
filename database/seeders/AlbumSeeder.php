@@ -37,7 +37,7 @@ class AlbumSeeder extends Seeder
         Album::create([
             'title' => 'Flower Boy',
             'year' => 2017,
-            'cover' => 'flowerboy.jpg0',
+            'cover' => 'flowerboy.jpg',
             'description' => 'Przełomowy album pod względem emocjonalnego podejścia — tematy samotności, tożsamości, miłości; dźwięki bardziej melodyjne i miękkie.'
         
         ]);
@@ -65,7 +65,7 @@ class AlbumSeeder extends Seeder
         Album::create([
             'title' => "Don't Tap the Glass",
             'year' => 2025,
-            'cover' => 'dttg.jpg',
+            'cover' => 'dttg.png',
             'description' => 'Najnowszy album — bardziej energetyczny, z elementami house, funku i tańca; lżejszy ton, eksperyment z brzmieniem'
         ]);
 
