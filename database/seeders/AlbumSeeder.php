@@ -10,33 +10,28 @@ class AlbumSeeder extends Seeder
 {
     public function run()
     {
-        Album::factory()->count(5)->create()->each(function (Album $album) {
-            Song::factory()->count(rand(8,14))->create([
-                'album_id' => $album->id,
-            ]);
-        });
         Album::create([
             'title' => 'Bastard',
             'year' => 2009,
-            'cover' => Null,
+            'cover' => 'bastard.png',
             'description' => 'Debiutancki projekt (często traktowany jako mixtape) Tylera, w którym eksploruje mroczne tematy, relacje rodzinne, bunt i konflikty wewnętrzne.'
         ]);
         Album::create([
             'title' => 'Goblin',
             'year' => 2011,
-            'cover' => Null,
+            'cover' => 'goblin.jpg',
             'description' => 'Drugi oficjalny album, wyróżniający się mrocznym klimatem i dialogami z fikcyjnym terapeutą Dr. TC.'
         ]);
         Album::create([
             'title' => 'Wolf',
             'year' => 2013,
-            'cover' => Null,
+            'cover' => 'wolf.jpg',
             'description' => 'Projekt koncepcyjny z postaciami Wolf, Sam i Salem, kontynuujący motywy psychologiczne i konflikty wewnętrzne.'
         ]);
         Album::create([
             'title' => 'Cherry Bomb',
             'year' => 2015,
-            'cover' => Null,
+            'cover' => 'Cherrybomb.png',
             'description' => 'Bardziej agresywny i eksperymentalny niż poprzednie, łączy elementy hip-hopu, jazzu, rocka i dźwiękowych eksperymentów.'
         ]);
         Album::create([
@@ -56,7 +51,7 @@ class AlbumSeeder extends Seeder
         Album::create([
             'title' => 'Call Me If You Get Lost',
             'year' => 2021,
-            'cover' => Null,
+            'cover' => 'cmiygl.jpg',
             'description' => 'Album podróżniczy, narrowany przez DJ Drama, z motywami luksusu, introspekcji, ryzyka i tożsamości.'
         ]);
 
@@ -70,7 +65,7 @@ class AlbumSeeder extends Seeder
         Album::create([
             'title' => "Don't Tap the Glass",
             'year' => 2025,
-            'cover' => Null,
+            'cover' => 'dttg.jpg',
             'description' => 'Najnowszy album — bardziej energetyczny, z elementami house, funku i tańca; lżejszy ton, eksperyment z brzmieniem'
         ]);
 
