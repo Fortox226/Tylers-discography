@@ -9,7 +9,8 @@ class AlbumController extends Controller
 {
     public function index()
     {
-        return Album::with('songs')->get();
+        $albums = Album::with('songs')->get();
+        return view('discography', compact('albums'));
     }
 
     public function store(Request $request)
