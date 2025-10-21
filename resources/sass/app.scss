@@ -171,37 +171,57 @@ nav {
     }
 }
 
-.album-row {
+.album {
+    margin-bottom: 80px;
+}
+
+.album-content {
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin: 40px;
-    width: 100%;
+    align-items: flex-start;
+    /* wyrównuje górę obrazka i listy */
+    gap: 60px;
+    /* odstęp między okładką a listą piosenek */
+    margin-top: 20px;
+}
 
-    h2 {
-        margin-bottom: 10px;
-    }
+.album-cover {
+    width: 280px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
 
-    p {
-        margin-bottom: 10px;
-        color: white;
-    }
+/* Układ kolumnowy piosenek */
+.song-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(8, auto);
+    column-gap: 60px;
+    row-gap: 8px;
+}
 
-    img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-    }
+.song-item {
+    font-size: 15px;
+    line-height: 1.5;
+}
 
-    img:hover {
-        transform: scale(1.05);
-    }
+.song-number {
+    font-weight: bold;
+    margin-right: 4px;
+}
 
-    ul {
-        color: white;
-        margin: 20px 20px 0 0;
-    }
+.song-duration {
+    color: #aaa;
+    margin-left: 6px;
+}
+
+p {
+    color: #ccc;
+}
+
+.song-title {
+    color: #ccc;
+}
+
+.song-number {
+    color: #ccc;
 }
