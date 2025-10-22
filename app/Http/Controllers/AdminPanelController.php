@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Album;
+use App\Models\User;
 
 class AdminPanelController extends Controller
 {
@@ -18,6 +20,9 @@ class AdminPanelController extends Controller
             abort(403, 'Brak uprawnień administratora');
         }
 
-        return view('admin'); // Twój widok panelu admina
+        $albums = Album::with('songs')->get();
+        $users = User::all();
+
+        return view('admin', compact('users', 'albums'));
     }
 }

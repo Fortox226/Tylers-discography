@@ -20,7 +20,7 @@
 </head>
 <body style="background-color: #121212;">
     <div id="app">
-        <main class="py-4">
+        <main class="py-admin">
             @yield('content')
         </main>
     </div>

@@ -225,3 +225,35 @@ p {
 .song-number {
     color: #ccc;
 }
+
+// admin panel
+.py-admin {
+    display: flex;
+    flex-wrap: wrap;
+
+    header {
+        width: 100%;
+    }
+
+    .sekcje {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+
+        .users-admin {
+            width: 49%;
+            height: 600px;
+            background-color: #aaa;
+            border-radius: 12.5px;
+        }
+
+        .albums-admin {
+            width: 49%;
+            height: 600px;
+            background-color: #aaa;
+            border-radius: 12.5px;
+        }
+    }
+
+}
