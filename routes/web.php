@@ -19,5 +19,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 });
 
 Route::get('adminpanel', [AdminPanelController::class, 'index'])->middleware('auth');
+Route::get('adminpanel/{id}', [AdminPanelController::class, 'getUser']);
+Route::delete('/users/{id}', [AdminPanelController::class, 'destroy'])->name('users.destroy');
 Route::get('discography', [DiscographyController::class, 'index'])->middleware('auth');
 

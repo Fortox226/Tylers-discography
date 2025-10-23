@@ -25,4 +25,18 @@ class AdminPanelController extends Controller
 
         return view('admin', compact('users', 'albums'));
     }
+
+    public function getUser($id)
+    {
+        $user = User::findOrFail($id);
+        return response()->json($user);
+    }
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect()->back()->with('success', 'Użytkownik został usunięty.');
+    }
 }
