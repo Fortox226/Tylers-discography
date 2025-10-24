@@ -251,6 +251,51 @@ p {
                 width: 100%;
                 text-align: center;
             }
+
+            .user-row {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-right: 10px;
+                background-color: #c2c0c0;
+                margin-bottom: 5px;
+                align-items: center;
+
+                span {
+                    width: 100px;
+                    height: 21spx;
+                    text-align: center;
+
+                }
+
+                .buttons {
+                    display: flex;
+
+                    width: 30;
+
+                    .info-btn {
+                        background-color: #3498db;
+                        color: white;
+                        border: none;
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #2980b9;
+                        }
+                    }
+
+                    .delete-btn {
+                        background-color: red;
+                        color: white;
+                        border: none;
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
         }
 
         .albums-admin {
@@ -267,78 +312,10 @@ p {
     }
 }
 
-/* Cały ekran zasłonięty przez tło */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    /* rozmycie tła */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* półprzezroczyste ciemne tło */
-    justify-content: center;
-    align-items: center;
-}
+dialog {
+    background-color: #aaa;
 
-/* Okno z treścią */
-.modal-content {
-    background: #fefefe;
-    padding: 20px 30px;
-    border-radius: 15px;
-    width: 400px;
-    max-width: 90%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease;
-}
-
-/* Animacja wejścia */
-@keyframes fadeIn {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
+    &::backdrop {
+        backdrop-filter: blur(20px);
     }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Przycisk zamknięcia */
-.close {
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #333;
-}
-
-.close:hover {
-    color: red;
-}
-
-.info-btn {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.info-btn:hover {
-    background-color: #2980b9;
-}
-
-.delete-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 10px;
-    cursor: pointer;
 }
