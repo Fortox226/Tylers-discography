@@ -8,13 +8,15 @@
 </header>
 <dialog>
   <button autofocus id="closeModal">Close</button>
-  <p>{{ $user->name }}</p>
+  <p class="user-name"></p>
+  <p class="user-email"></p>
+  <pc class="user-role"></p>
 </dialog>
 <div class="sekcje">
     <section class="users-admin">
         <h2>Lista użytkowników</h2>
         @foreach ($users as $user)
-            <div class="user-row" data-id="{{ $user->id }}">
+            <div class="user-row" data-id="{{ $user->id }}" data-login="{{$user->name}}" data-email="{{ $user->email }}" data-role="{{ $user->role }}">
                 <span> - {{ $user->name }}</span>
                 <div class="buttons">
                     <button class="info-btn" id="openModal">Info</button>
