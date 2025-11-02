@@ -30,15 +30,20 @@ document.querySelectorAll(".user-row").forEach(userRow => {
         dialog.querySelector('.user-role').replaceChildren(roleSelect)
 
         roleSelect.addEventListener("change", () => {
-            fetch(
-                ""
-            ).then((res) => {
-                if (!res.ok)
-                    throw new Error();
-            }).catch(() => {
-
+            fetch(`/admin/update-role/${row.dataset.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content
+                },
+                body: JSON.stringify({ role: roleSelect.value })
             })
-        })
+            .then(res => res.json())
+            .then(() => {
+                userRow.querySelector('.user-role-display').textContent = roleSelect.value;
+            })
+            .catch(() => alert("Zaktualizowano"));
+        });
     })
 })
 closeButton.addEventListener('click', () => {

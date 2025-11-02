@@ -38,4 +38,13 @@ class AdminPanelController extends Controller
 
         return redirect()->back()->with('success', 'Użytkownik został usunięty.');
     }
+
+    public function updateRole(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+        $user->role = $request->input('role');
+        $user->save();
+
+        return response()->json(['success' => true]);
+    }
 }
