@@ -1,3 +1,62 @@
+# Tyler Discography
+
+## Table of Contents
+
+1. [Creators](#creators)
+2. [Project Overview](#project-overview)
+3. [Features](#features)
+4. [Technologies](#technologies)
+5. [Setup Instructions](#setup-instructions)
+6. [Laravel](#laravel)
+
+---
+
+## Creators
+
+-   **Filip Zabrzewski**
+-   **Tobiasz Twardak**
+-   **Jan Miepariszwili**
+
+---
+
+## Project Overview
+
+**Tyler's Discography** is a
+
+---
+
+## Features
+
+-   **Dynamic Product Loading**: Products are fetched dynamically from a database using JavaScript and PHP.
+-   **Responsive Design**: The website is fully responsive, ensuring a great user experience on all devices.
+-   **Product Filtering**: Users can filter products by categories such as T-shirts, Jackets, Shoes, etc.
+-   **Social Media Integration**: Links to social media platforms like YouTube, Instagram, Facebook, and Reddit.
+-   **Reload Button**: Refresh the product list with a single click.
+
+---
+
+## Technologies
+
+-   ![HTML](https://img.shields.io/badge/HTML-orange)
+-   ![SCSS](https://img.shields.io/badge/SCSS-pink)
+-   ![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
+-   ![PHP](https://img.shields.io/badge/PHP-blue)
+-   ![MySQL](https://img.shields.io/badge/MySQL-lightgreen)
+
+---
+
+## Setup Instructions
+
+1. **Clone the Repository**:
+
+    ```bash
+
+    ```
+
+## Laravel
+
+<details><summary>Click Here</summary>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -11,13 +70,13 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -35,14 +94,14 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+-   **[Vehikl](https://vehikl.com)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel)**
+-   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+-   **[Redberry](https://redberry.international/laravel-development)**
+-   **[Active Logic](https://activelogic.com)**
 
 ## Contributing
 
@@ -59,3 +118,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+</details>
