@@ -39,7 +39,7 @@ The application combines backend logic written in Laravel with a modern front-en
 ## 🛠️ Technologies Used
 | Layer | Technology |
 |-------|-------------|
-| **Backend** | PHP 8.4, Laravel 12 |
+| **Backend** | ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white) |
 | **Frontend** | Blade Templates, Tailwind CSS, JavaScript (Fetch API) |
 | **Database** | MySQL / SQLite |
 | **Tools** | Composer, NPM, Artisan CLI |
