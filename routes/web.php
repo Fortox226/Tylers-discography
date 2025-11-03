@@ -3,10 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\DiscographyController;
+use App\Http\Controllers\LogoutController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [LogoutController::class, 'index'])->name('home');
 
 Auth::routes();
 
