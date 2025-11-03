@@ -3,11 +3,12 @@
 ## Table of Contents
 
 1. [Creators](#creators)
-2. [Project Overview](#project-overview)
-3. [Features](#features)
-4. [Technologies](#technologies)
-5. [Setup Instructions](#setup-instructions)
-6. [Laravel](#laravel)
+2. [Overview](#📖-overview)
+3. [Features](#💡-features)
+4. [Technologies](#🛠️-technologies-used)
+5. [Installation & setup](#⚙️-installation--setup)
+6. [Project Structure](#🗂️-project-structure)
+7. [Laravel](#laravel)
 
 ---
 
@@ -47,7 +48,7 @@ The application combines backend logic written in Laravel with a modern front-en
 ---
 
 ## ⚙️ Installation & Setup
-
+<details><summary>Click here</summary>
 
 ```bash
 git clone https://github.com/yourusername/yourproject.git
@@ -117,6 +118,7 @@ Changing the role triggers a PATCH request (/admin/update-role/{id}) handled by 
 The backend updates the database asynchronously and returns a JSON response.
 
 Albums and songs are displayed dynamically in a multi-column layout with Tailwind styling.
+</details>
 
 ## 🗂️ Project Structure
 
