@@ -19,39 +19,128 @@
 
 ---
 
-## Project Overview
+## 📖 Overview
+This project is an **Admin Panel and Music Album Management System** built with **Laravel** and **Tailwind CSS**.  
+It allows administrators to manage users, edit their roles, and view all albums with their respective songs in a clean and responsive layout.  
+The application combines backend logic written in Laravel with a modern front-end using Blade templates and Tailwind.
 
-**Tyler's Discography** is a
 
----
+## 💡 Features
+- 👤 **User Management Panel** — list of all users with modals for detailed info  
+- 🔄 **Role Editing** — change user roles dynamically (Admin/User) via Fetch API  
+- 🎶 **Album Display** — shows albums and songs in multiple columns  
+- ⚙️ **Laravel MVC Architecture** — clean and modular backend  
+- 🔒 **CSRF-Protected Requests** — secure communication between frontend and backend  
+- 🖥️ **Responsive Design** — styled using Tailwind CSS and minimal custom CSS  
 
-## Features
-
--   **Dynamic Product Loading**: Products are fetched dynamically from a database using JavaScript and PHP.
--   **Responsive Design**: The website is fully responsive, ensuring a great user experience on all devices.
--   **Product Filtering**: Users can filter products by categories such as T-shirts, Jackets, Shoes, etc.
--   **Social Media Integration**: Links to social media platforms like YouTube, Instagram, Facebook, and Reddit.
--   **Reload Button**: Refresh the product list with a single click.
-
----
-
-## Technologies
-
--   ![HTML](https://img.shields.io/badge/HTML-orange)
--   ![SCSS](https://img.shields.io/badge/SCSS-pink)
--   ![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
--   ![PHP](https://img.shields.io/badge/PHP-blue)
--   ![MySQL](https://img.shields.io/badge/MySQL-lightgreen)
 
 ---
 
-## Setup Instructions
+## 🛠️ Technologies Used
+| Layer | Technology |
+|-------|-------------|
+| **Backend** | PHP 8.4, Laravel 12 |
+| **Frontend** | Blade Templates, Tailwind CSS, JavaScript (Fetch API) |
+| **Database** | MySQL / SQLite |
+| **Tools** | Composer, NPM, Artisan CLI |
 
-1. **Clone the Repository**:
+---
 
-    ```bash
+## ⚙️ Installation & Setup
 
-    ```
+
+```bash
+git clone https://github.com/yourusername/yourproject.git
+
+cd yourproject
+
+composer install
+
+npm install
+```
+### Configure the environment file
+
+Copy the example .env file and update your database info:
+
+```bash
+    cp .env.example .env
+```
+Example database config:
+
+```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_database
+    DB_USERNAME=root
+    DB_PASSWORD=
+```
+
+### Configure Artisan
+
+```bash
+    php artisan key:generate
+
+    php artisan migrate --seed
+```
+### Start the Laravel server
+
+```bash
+    php artisan serve
+```
+visit the app at: http://127.0.0.1:8000
+
+### Start the Vite development server (for Tailwind CSS)
+
+In a second terminal, run:
+
+```bash
+    npm run dev
+```
+
+## 🔑 Default Admin Account
+
+After seeding, you can log in with:
+
+```bash
+    Email: admin@example.com
+    Password: haslo123
+```
+## 🧠 How It Works
+
+The Admin Panel lists all users fetched from the database.
+
+Clicking Info opens a modal window with detailed user data.
+
+Changing the role triggers a PATCH request (/admin/update-role/{id}) handled by a Laravel controller.
+
+The backend updates the database asynchronously and returns a JSON response.
+
+Albums and songs are displayed dynamically in a multi-column layout with Tailwind styling.
+
+## 🗂️ Project Structure
+
+```bash 
+app/
+ ├── Http/
+ │    ├── Controllers/        # Application logic (UserController, AlbumController)
+ │    └── Models/             # Eloquent models (User, Album, Song)
+database/
+ ├── migrations/              # Database table definitions
+ └── seeders/                 # Sample data for users and albums
+public/
+ └── img files                # images on the site
+resources/
+ ├── views/                   # Blade templates for UI
+ ├── css/                     # Tailwind entry point
+ └── js/                      # Frontend scripts (Fetch, modals)
+routes/
+ └── web.php                  # Web routes
+
+```
+
+
+
 
 ## Laravel
 
