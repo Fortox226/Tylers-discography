@@ -6,6 +6,12 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
+                @if (session('status'))
+                    <div style="background-color: #d1fae5; color: #065f46; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

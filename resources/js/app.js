@@ -38,11 +38,15 @@ document.querySelectorAll(".user-row").forEach(userRow => {
                 },
                 body: JSON.stringify({ role: roleSelect.value })
             })
-            .then(res => res.json())
-            .then(() => {
-                userRow.querySelector('.user-role-display').textContent = roleSelect.value;
-            })
-            .catch(() => alert("Zaktualizowano"));
+                .then(res => res.json())
+                .then(() => {
+                    userRow.dataset.role = roleSelect.value;
+                    alert("Zaktualizowano")
+                })
+                .catch(() => {
+                    roleSelect.value = userRow.dataset.role;
+                    alert("Nie Zaktualizowano")
+                });
         });
     })
 })

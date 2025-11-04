@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\DiscographyController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 
 Route::get('/', [LogoutController::class, 'index'])->name('home');
 
@@ -24,4 +25,7 @@ Route::patch('/admin/update-role/{id}', [AdminPanelController::class, 'updateRol
     ->name('admin.updateRole');
 
 Route::get('discography', [DiscographyController::class, 'index'])->middleware('auth');
+
+Route::get('/password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('/password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
