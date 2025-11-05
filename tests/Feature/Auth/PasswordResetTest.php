@@ -16,7 +16,7 @@ class PasswordResetTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->withoutMiddleware(); // wyłącza CSRF i inne middleware
+        $this->withoutMiddleware(); // Wyłączenie csrf
     }
 
     #[Test]
@@ -27,8 +27,11 @@ class PasswordResetTest extends TestCase
         $response->assertSee('test-token');
     }
 
+
+
+
     #[Test]
-    public function user_can_reset_password_with_valid_token(): void
+    public function user_can_reset_password_with_valid_token(): void // test zresetowania hasła z poprawnym tokenem
     {
         $user = User::factory()->create([
             'email' => 'test@example.com',
@@ -44,13 +47,12 @@ class PasswordResetTest extends TestCase
             'password_confirmation' => 'new-password',
         ]);
 
-        // zakładamy, że po udanym resecie redirectuje do /login
         $response->assertRedirect('/login');
         $this->assertTrue(Hash::check('new-password', $user->fresh()->password));
     }
 
     #[Test]
-    public function reset_fails_with_invalid_token(): void
+    public function reset_fails_with_invalid_token(): void // test zresetowania hasła z niepoprawnym tokenem
     {
         $user = User::factory()->create([
             'email' => 'wrong@example.com',
@@ -64,13 +66,12 @@ class PasswordResetTest extends TestCase
             'password_confirmation' => 'new-password',
         ]);
 
-        // Laravel zwraca redirect z błędami do sesji przy nieudanym resecie
         $response->assertStatus(302);
         $response->assertSessionHasErrors('email');
     }
 
     #[Test]
-    public function reset_fails_when_passwords_do_not_match(): void
+    public function reset_fails_when_passwords_do_not_match(): void // test błędu resetowania gdy hasła do siebie nie pasują
     {
         $user = User::factory()->create([
             'email' => 'mismatch@example.com',
@@ -90,7 +91,7 @@ class PasswordResetTest extends TestCase
     }
 
     #[Test]
-    public function reset_requires_all_fields(): void
+    public function reset_requires_all_fields(): void // test udanego resetowania
     {
         $response = $this->post(route('password.update'), []);
 

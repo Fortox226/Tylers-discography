@@ -9,6 +9,7 @@
 5. [Installation & setup](#⚙️-installation--setup)
 6. [Project Structure](#🗂️-project-structure)
 7. [Laravel](#laravel)
+7. [To improve](#to-improve)
 
 ---
 
@@ -118,6 +119,8 @@ Changing the role triggers a PATCH request (/admin/update-role/{id}) handled by 
 The backend updates the database asynchronously and returns a JSON response.
 
 Albums and songs are displayed dynamically in a multi-column layout with Tailwind styling.
+
+
 </details>
 
 ## 🗂️ Project Structure
@@ -211,3 +214,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 </details>
+
+
+## To improve
+    You can't add songs to albums and creating new album is only possible with AlbumSeeder and SongSeeder files.
+
+    Sizing is not working properly in all cases.
+
+    function remember me is not working when you are logging in.
+
+    You can't play the songs on the site
